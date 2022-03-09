@@ -6,5 +6,10 @@
  * @returns {String} The longest string from within the input array.
  */
 export default function longestString(strings) {
-    
+    let longest = strings.reduce((a,b) => {
+        return a.length > b.length ? a : b
+    }, '');
+    console.log(longest);
+
+    return longest;
 }
